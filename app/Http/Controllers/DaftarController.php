@@ -83,12 +83,7 @@ class DaftarController extends Controller
      */
     public function destroy(string $id)
     {
-        $daftar = Daftar::findOrfail($id);
-        if ($daftar->poli->count() >= 1) {
-            flash('Data tidak bisa dihapus karena sudah terkait dengan data poli')->error();
-            return back();
-        }
-
+        $daftar = Daftar::findOrFail($id);
         $daftar->delete();
         flash('Data sudah dihapus')->success();
         return back();
