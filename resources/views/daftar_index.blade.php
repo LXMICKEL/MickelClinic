@@ -30,10 +30,7 @@
                             <td>{{ $item->poli->nama }}</td>
                             <td>{{ $item->keluhan }}</td>
                             <td>
-<<<<<<< HEAD
                                 <a href="/daftar/{{ $item->id }}" class="btn btn-info btn-sm">Detail</a>
-=======
->>>>>>> 55d0ab9c1c733b1f392eac9b25d610caf7af0d68
                                 <form action="/daftar/{{ $item->id }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('delete')
